@@ -11,4 +11,7 @@ function sleep(milliseconds) {
   }
 }
 
+ let jsRacer = new JSRacer(10,10,2)
+ jsRacer.player_maju();
+
 // Your code here...

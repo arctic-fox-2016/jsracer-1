@@ -1,11 +1,11 @@
 "use strict"
 
 class Dice {
-  constructor() {
-
+  constructor(side) {
+    this.side = side
   }
   roll() {
-    
+    return Math.floor((Math.random() * 6) + 1);
   }
 }
 
