@@ -1,29 +1,32 @@
-"use strict"
+var term = require( 'terminal-kit' ).terminal ;
 
-import Dice from "./dice.js"
+var progressBar , progress = 0 ;
 
-class JSRacer {
-  constructor(players, length, sides) {
 
-  }
-  print_board() {
+function doProgress1()
+{
+    // Add random progress
+    progress += Math.random() / 10 ;
+    progressBar.update( progress ) ;
 
-  }
-  print_line(player, pos) {
-
-  }
-  advanced_player(player) {
-
-  }
-  finished() {
-
-  }
-  winner() {
-
-  }
-  reset_board() {
-    console.log("\x1B[2J")
-  }
+    if ( progress >= 1 )
+    {
+        // Cleanup and exit
+        setTimeout( function() { term( '\n' ) ; process.exit() ; } , 200 ) ;
+    }
+    else
+    {
+        setTimeout( doProgress1 , 100 + Math.random() * 400 ) ;
+    }
 }
 
-export default JSRacer
+
+progressBar = term.progressBar( {
+    width: 80 ,
+    title: 'Serious stuff in progress:' ,
+    eta: true ,
+    percent: true
+} ) ;
+
+
+doProgress1() ;
