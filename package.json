@@ -1,0 +1,29 @@
+{
+  "name": "jsracer-1",
+  "version": "1.0.0",
+  "description": "\"balapan\"",
+  "main": "dice.js",
+  "dependencies": {
+    "terminal-kit": "^0.24.26"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.14.0",
+    "babel-preset-es2015": "^6.14.0"
+  },
+  "scripts": {
+    "test": "\"\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arctic-fox-2016/jsracer-1.git"
+  },
+  "keywords": [
+    "\"sahbana_imam\""
+  ],
+  "author": "\"sahbana_and_isman\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arctic-fox-2016/jsracer-1/issues"
+  },
+  "homepage": "https://github.com/arctic-fox-2016/jsracer-1#readme"
+}
