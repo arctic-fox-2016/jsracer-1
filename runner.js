@@ -12,3 +12,11 @@ function sleep(milliseconds) {
 }
 
 // Your code here...
+  let racer = new JSRacer(["a","b","c"], 30, [0,0,0])
+  function play() {
+    setTimeout(function() {
+      if (!racer.run()) play()
+
+    }, 300)
+  }
+  play()
